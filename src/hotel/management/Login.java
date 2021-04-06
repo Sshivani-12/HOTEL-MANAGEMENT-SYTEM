@@ -71,7 +71,7 @@ public void actionPerformed(ActionEvent ae)//to go to next page
        if(rs.next())
        {
            
-        new HOTELMANAGEMENT().setVisible(true);
+        new Dashboard().setVisible(true);
         this.setVisible(false);
        }
        else
