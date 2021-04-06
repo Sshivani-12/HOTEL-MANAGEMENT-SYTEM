@@ -61,7 +61,7 @@ public void actionPerformed(ActionEvent ae)//to go to next page
     if(ae.getSource()==b1)
     {
        String username= t1.getText();
-       String password= t1.getText();
+       String password= t2.getText();
        conn c =new conn();
         
        String str="select * from login where username= '"+username+"' and password='"+password+"'";
@@ -70,6 +70,7 @@ public void actionPerformed(ActionEvent ae)//to go to next page
        ResultSet rs=c.s.executeQuery(str); 
        if(rs.next())
        {
+           
         new HOTELMANAGEMENT().setVisible(true);
         this.setVisible(false);
        }
