@@ -6,12 +6,13 @@
 package hotel.management;
 import java.awt.*;
 import javax.swing.*;
+import java.awt.event.*;//to import package inside awt
 
 /**
  *
  * @author Shivani
  */
-public class HOTELMANAGEMENT extends JFrame {
+public class HOTELMANAGEMENT extends JFrame implements ActionListener{
  HOTELMANAGEMENT(){
         setBounds(300,200,1366,565);//combination of setvisibility and location
     //setSize(400,400);
@@ -44,12 +45,14 @@ l1.setBounds(0,0,1366,565); //y axis,x axis,size
     b1.setBackground(Color.BLACK);
     b1.setForeground(Color.WHITE);
     b1.setBounds(580,390,150,50);
+    b1.addActionListener(this);
+    
     l1.add(b1);
     
     setLayout(null);
     setVisible(true);
     
-    while(true)
+    while(true)//for blinking
     {
         l2.setVisible(false);
       
@@ -68,6 +71,11 @@ l1.setBounds(0,0,1366,565); //y axis,x axis,size
     }
     
     
+ }
+ public void actionPerformed(ActionEvent ae)//to go to next page
+ {
+ new Login().setVisible(true);
+ this.setVisible(false);
  }
     public static void main(String[] args) {
         // TODO code application logic here
