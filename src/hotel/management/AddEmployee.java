@@ -12,7 +12,7 @@ import javax.swing.*;
 public class AddEmployee extends JFrame{ //Third Frame
 
     
-	JTextField textField,textField_1,textField_2,textField_3,textField_4,textField_5,textField_6;
+	JTextField t1,t2,t3,t4,t5,t6;
         JComboBox c1;
 
         public AddEmployee(){
@@ -29,9 +29,9 @@ public class AddEmployee extends JFrame{ //Third Frame
             Passportno.setBounds(60, 30, 150, 27);
             add(Passportno);
             
-            textField = new JTextField();
-            textField.setBounds(200, 30, 150, 27);
-            add(textField);
+            t1 = new JTextField();
+            t1.setBounds(200, 30, 150, 27);
+            add(t1);
 			
             JButton Next = new JButton("SAVE");
             Next.setBounds(200, 420, 150, 30);
@@ -44,9 +44,9 @@ public class AddEmployee extends JFrame{ //Third Frame
             Pnrno.setBounds(60, 80, 150, 27);
             add(Pnrno);
 			
-            textField_1 = new JTextField();
-            textField_1.setBounds(200, 80, 150, 27);
-            add(textField_1);
+            t2 = new JTextField();
+            t2.setBounds(200, 80, 150, 27);
+            add(t2);
             
             JLabel Gender = new JLabel("GENDER");
             Gender.setFont(new Font("Tahoma", Font.PLAIN, 17));
@@ -80,27 +80,27 @@ public class AddEmployee extends JFrame{ //Third Frame
             Nationality.setBounds(60, 220, 150, 27);
             add(Nationality);
 			
-            textField_3 = new JTextField();
-            textField_3.setBounds(200, 220, 150, 27);
-            add(textField_3);
+            t3 = new JTextField();
+            t3.setBounds(200, 220, 150, 27);
+            add(t3);
 	
             JLabel Name = new JLabel("PHONE");
             Name.setFont(new Font("Tahoma", Font.PLAIN, 17));
             Name.setBounds(60, 270, 150, 27);
             add(Name);
 	
-            textField_4 = new JTextField();
-            textField_4.setBounds(200, 270, 150, 27);
-            add(textField_4);
+            t4 = new JTextField();
+            t4.setBounds(200, 270, 150, 27);
+            add(t4);
 	
-            JLabel Phno = new JLabel("AADHAR");
-            Phno.setFont(new Font("Tahoma", Font.PLAIN, 17));
-            Phno.setBounds(60, 320, 150, 27);
-            add(Phno);
+            JLabel aadhar = new JLabel("AADHAR");
+            aadhar.setFont(new Font("Tahoma", Font.PLAIN, 17));
+            aadhar.setBounds(60, 320, 150, 27);
+            add(aadhar);
 			
-            textField_5 = new JTextField();
-            textField_5.setBounds(200, 320, 150, 27);
-            add(textField_5);
+            t5 = new JTextField();
+            t5.setBounds(200, 320, 150, 27);
+            add(t5);
 	
             
             JLabel email = new JLabel("EMAIL");
@@ -108,35 +108,29 @@ public class AddEmployee extends JFrame{ //Third Frame
             email.setBounds(60, 370, 150, 27);
             add(email);
 			
-            textField_6 = new JTextField();
-            textField_6.setBounds(200, 370, 150, 27);
-            add(textField_6);
+            t6 = new JTextField();
+            t6.setBounds(200, 370, 150, 27);
+            add(t6);
 	
             setVisible(true);
 	
-            JLabel AddPassengers = new JLabel("ADD EMPLOYEE DETAILS");
-            AddPassengers.setForeground(Color.BLUE);
-            AddPassengers.setFont(new Font("Tahoma", Font.PLAIN, 31));
-            AddPassengers.setBounds(450, 24, 442, 35);
-            add(AddPassengers);
+            JLabel Add = new JLabel("ADD EMPLOYEE DETAILS");
+            Add.setForeground(Color.BLUE);
+            Add.setFont(new Font("Tahoma", Font.PLAIN, 31));
+            Add.setBounds(450, 24, 442, 35);
+            add(Add);
 			
      
-            ImageIcon i1 = new ImageIcon(ClassLoader.getSystemResource("hotel/management/system/icons/tenth.jpg"));
-            Image i3 = i1.getImage().getScaledInstance(500, 500,Image.SCALE_DEFAULT);
-            ImageIcon i2 = new ImageIcon(i3);
-            JLabel image = new JLabel(i2);
-            image.setBounds(410,80,480,410);
-            add(image);
-
+           
             
             Next.addActionListener(new ActionListener(){
                 public void actionPerformed(ActionEvent ae){
-                    String name = textField.getText();
-                    String age = textField_1.getText();
-                    String salary = textField_3.getText();
-                    String phone = textField_4.getText();
-                    String aadhar = textField_5.getText();
-                    String email = textField_6.getText();
+                    String name = t1.getText();
+                    String age = t2.getText();
+                    String salary = t3.getText();
+                    String phone = t4.getText();
+                    String aadhar = t5.getText();
+                    String email = t6.getText();
                    
                     String gender = null;
                     
