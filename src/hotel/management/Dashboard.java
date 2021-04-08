@@ -29,20 +29,76 @@ public class Dashboard extends JFrame {
         JMenuItem reception=new JMenuItem(" Go  to  Reception");
         hotelmanagement.add(reception);
         
+         reception.addActionListener(new ActionListener(){
+            public void actionPerformed(ActionEvent ae){
+                new Reception();
+            }
+	});
+        
         JMenu Admin = new JMenu("ADMIN");
         Admin.setForeground(Color.RED);
 	menu.add(Admin);
         
         JMenuItem Employee = new JMenuItem("ADD EMPLOYEE");
-	Admin.add(Employee);
+	//Employee.addActionListener(this);
+        Admin.add(Employee);
      
+        Employee.addActionListener(new ActionListener(){
+            public void actionPerformed(ActionEvent ae){
+                try{
+                    new AddEmployee().setVisible(true);
+                }catch(Exception e ){}
+            }
+	});
         
         JMenuItem Add_Rooms = new JMenuItem("ADD ROOMS");
-	Admin.add(Add_Rooms);
+	//Add_Rooms.addActionListener(this);
+        Admin.add(Add_Rooms);
         
+         Add_Rooms.addActionListener(new ActionListener(){
+            public void actionPerformed(ActionEvent ae){
+                try{
+                    new AddRoom().setVisible(true);
+                }catch(Exception e ){}
+            }
+	});
+         
+         
+         
         JMenuItem Add_Drivers = new JMenuItem("ADD DRIVERS");
-	Admin.add(Add_Drivers);
+	//Add_Drivers.addActionListener(this);
+        
+        Admin.add(Add_Drivers);
+        
+         Add_Drivers.addActionListener(new ActionListener(){
+            public void actionPerformed(ActionEvent ae){
+                try{
+                    new AddDriver().setVisible(true);
+                }catch(Exception e ){}
+            }
+	});
     }
+    
+    /*
+    public void actionPerformed(ActionEvent ae){
+        if(ae.getActionCommand().equals("RECEPTION")){
+        }
+        
+        else if(ae.getActionCommand().equals("ADD DRIVER")){//to choose in between menus
+        new AddDriver().setVisible(true);
+    }
+    else if(ae.getActionCommand().equals("ADD EMPLOYEE"))
+    {//to open employee page
+        new AddEmployee().setVisible(true);
+    }
+    else if(ae.getActionCommand().equals("ADD ROOM"))
+    {//to open employee page
+        new AddRoom().setVisible(true);
+    }
+    }
+    */
+    
+    
     public static void main(String[] args) {
         new Dashboard().setVisible(true);
     }
