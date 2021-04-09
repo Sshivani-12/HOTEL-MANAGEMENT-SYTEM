@@ -40,7 +40,7 @@ public class Reception extends JFrame {
 			}
 			}
 		});
-		btnNewCustomerForm.setBounds(10, 30, 200, 30);
+		btnNewCustomerForm.setBounds(10, 60, 200, 30);
                 btnNewCustomerForm.setBackground(Color.BLACK);
                 btnNewCustomerForm.setForeground(Color.WHITE);
 		contentPane.add(btnNewCustomerForm);
@@ -59,32 +59,13 @@ public class Reception extends JFrame {
 				
 			}
 		});
-		btnNewButton.setBounds(10, 70, 200, 30);
+		btnNewButton.setBounds(10, 110, 200, 30);
                 btnNewButton.setBackground(Color.BLACK);
                 btnNewButton.setForeground(Color.WHITE);
 
 		contentPane.add(btnNewButton);
 		
-		JButton btnNewButton_1 = new JButton("Department");
-		btnNewButton_1.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
-				try{
-					Department dept = new Department();
-				//	dept.setVisible(true);
-					setVisible(false);
-					
-				}
-				catch (Exception e1){
-					e1.printStackTrace();
-				}
-			
-			}
-		});
-		btnNewButton_1.setBounds(10, 110, 200, 30);
-                btnNewButton_1.setBackground(Color.BLACK);
-                btnNewButton_1.setForeground(Color.WHITE);
-
-		contentPane.add(btnNewButton_1);
+	
 		
 		JButton btnNewButton_2 = new JButton("All Employee Info");
 		btnNewButton_2.addActionListener(new ActionListener() {
@@ -210,7 +191,7 @@ public class Reception extends JFrame {
 			public void actionPerformed(ActionEvent arg0) {
 				try{
 				PickUp pick = new PickUp();
-			//	pick.setVisible(true);
+				pick.setVisible(true);
                                 setVisible(false);
 				}
 				catch(Exception e){
@@ -229,7 +210,7 @@ public class Reception extends JFrame {
 			public void actionPerformed(ActionEvent e) {
 				try {
 				SearchRoom search = new SearchRoom();
-				//search.setVisible(true);
+				search.setVisible(true);
                                 setVisible(false);
 				}
 				catch (Exception ss){
