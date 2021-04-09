@@ -32,8 +32,9 @@ public class Reception extends JFrame {
 		btnNewCustomerForm.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				try{
-			//	new NewCustomer().setVisible(true);
+			new NewCustomer().setVisible(true);
                                 setVisible(false);
+                                
 			}catch(Exception e1){
 				e1.printStackTrace();
 			}
@@ -49,7 +50,7 @@ public class Reception extends JFrame {
 			public void actionPerformed(ActionEvent arg0) {
 				try{
 				Room room = new Room();
-			//	room.setVisible(true);
+				room.setVisible(true);
                                 setVisible(false);
 				}
 				catch(Exception e){
@@ -113,7 +114,7 @@ public class Reception extends JFrame {
 				try{
 					//error ---------------------
 					CustomerInfo customer = new CustomerInfo();
-				//	customer.setVisible(true);				
+					customer.setVisible(true);				
 					setVisible(false);
 				}
 				catch (Exception e1){
@@ -149,15 +150,15 @@ public class Reception extends JFrame {
 		JButton btnNewButton_4 = new JButton("Check Out");
 		btnNewButton_4.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				CheckOut check;
-		//		try {
-		//			check = new CheckOut();
-		//			check.setVisible(true);
+				
+				try {
+					CheckOut check = new CheckOut();
+					check.setVisible(true);
                                         setVisible(false);
-		//		} catch (SQLException e1) {
+				} catch (Exception e1) {
 					// TODO Auto-generated catch block
-		//			e1.printStackTrace();
-		//		}
+					e1.printStackTrace();
+				}
 			}
 		});
 		btnNewButton_4.setBounds(10, 270, 200, 30);
@@ -171,7 +172,7 @@ public class Reception extends JFrame {
 			public void actionPerformed(ActionEvent e) {
 				try{
 				UpdateCheck update = new UpdateCheck();
-		//		update.setVisible(true);
+				update.setVisible(true);
                                 setVisible(false);
 				}
 				catch(Exception e1){
@@ -190,7 +191,7 @@ public class Reception extends JFrame {
 			public void actionPerformed(ActionEvent e) {
 				try{
 					UpdateRoom room = new UpdateRoom();
-			//		room.setVisible(true);
+					room.setVisible(true);
                                         setVisible(false);
 				}catch(Exception s)
 				{

@@ -7,7 +7,7 @@ import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
 
-import net.proteanit.sql.DbUtils;//to extract data from mysql
+import net.proteanit.sql.DbUtils;//to extract data from mysql//rs2.jar file import keli
 
 import javax.swing.JTable;
 import java.sql.*;	
