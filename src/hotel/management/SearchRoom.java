@@ -84,8 +84,11 @@ public class SearchRoom extends JFrame implements ActionListener {
                 
                 
         setLayout(null);
-        setBounds(500,200,1000,650);
-        setVisible(true);
+        
+    setBounds(350,130,1000,900);
+    setVisible(true);
+    
+    
         }
         
         public void actionPerformed(ActionEvent ae)

@@ -23,7 +23,9 @@ public class AddRoom extends JFrame implements ActionListener{
 
 
     public AddRoom() {
-        setBounds(450, 200, 1000, 450);
+          setSize(900,600);
+            setLocation(430,170);
+          
 	contentPane = new JPanel();
 	setContentPane(contentPane);
 	contentPane.setLayout(null);

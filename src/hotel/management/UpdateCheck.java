@@ -114,8 +114,11 @@ public class UpdateCheck extends JFrame implements ActionListener{
     getContentPane().setBackground(Color.WHITE);
     
     setLayout(null);
-    setBounds(500,200,1000,500);
-    setVisible(true);
+    
+            setSize(900,600);
+            setLocation(430,170);
+            
+                setVisible(true);
     
     }
     

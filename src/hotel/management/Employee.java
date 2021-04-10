@@ -49,7 +49,9 @@ public class Employee extends JFrame {
 	public Employee() throws SQLException {
 		//conn = Javaconnect.getDBConnection();
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		setBounds(430, 200, 1000, 600);
+	        setSize(900,600);
+            setLocation(430,170);
+          
 		contentPane = new JPanel();
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		setContentPane(contentPane);

@@ -55,12 +55,12 @@ public class AddEmployee extends JFrame{ //Third Frame
 		
             JRadioButton NewRadioButton = new JRadioButton("MALE");
             NewRadioButton.setBackground(Color.WHITE);
-            NewRadioButton.setBounds(200, 120, 70, 27);
+            NewRadioButton.setBounds(200, 120, 90, 27);
             add(NewRadioButton);
 	
             JRadioButton Female = new JRadioButton("FEMALE");
             Female.setBackground(Color.WHITE);
-            Female.setBounds(280, 120, 70, 27);
+            Female.setBounds(290, 120, 90, 27);
             add(Female);
             
             
@@ -160,7 +160,7 @@ public class AddEmployee extends JFrame{ //Third Frame
 			
             setSize(900,600);
             setVisible(true);
-            setLocation(530,200);
+            setLocation(430,170);
 			
 	}
         

@@ -93,7 +93,10 @@ public class UpdateRoom extends JFrame implements ActionListener{
                 
                 
                 setLayout(null);
-                setBounds(500,600,1000,500);
+                
+            setSize(900,600);
+            setLocation(430,170);
+            
                 setVisible(true);
     }
     

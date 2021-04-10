@@ -8,6 +8,8 @@ public class Dashboard extends JFrame {
  
     Dashboard()
     {
+        
+        
     JLabel a = new JLabel("THE TAJ GROUP WELCOMES YOU");
 	a.setForeground(Color.BLACK);
         a.setFont(new Font("Tahoma", Font.PLAIN, 46));

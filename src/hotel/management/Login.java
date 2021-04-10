@@ -35,7 +35,9 @@ public class Login extends JFrame implements ActionListener{
       t2.setBounds(180,120,150,30);
       add(t2);
      
-      
+        
+        
+        
       b1=new JButton("Login");
       b1.setBackground(Color.BLACK);
       b1.setForeground(Color.WHITE) ;
@@ -51,7 +53,8 @@ public class Login extends JFrame implements ActionListener{
       add(b2);
       
      //setContentPane().setBackground(Color.WHITE);
-     setBounds(500,300,600,400);
+       setSize(900,600);setLocation(430,170);
+          
      setVisible(true);
     }
  
@@ -84,6 +87,7 @@ public void actionPerformed(ActionEvent ae)//to go to next page
        
        catch(Exception e)
        {
+           
        }
     }
     else if(ae.getSource()==b2)

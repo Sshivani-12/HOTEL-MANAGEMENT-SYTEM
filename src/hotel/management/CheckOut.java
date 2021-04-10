@@ -77,7 +77,9 @@ JLabel l2 = new JLabel("Customer Id");
     add(l3);
 
         setLayout(null);
-        setBounds(500,200,800,300);
+          setSize(900,600);
+           setLocation(430,170);
+           
         setVisible(true);
     
     }
