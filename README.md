@@ -2,8 +2,9 @@
 
 Admin will be able to do following services:
 
-- Rooms Status (Booked ,Available,Maintainance)
-- Add Employee
-- Add DriverList
+- Add Rooms Status (Booked ,Available,Maintainance)
+- Add Employee details
+- Add DriverList details
 - Extract details of Rooms,Driver,Employee
+
 
