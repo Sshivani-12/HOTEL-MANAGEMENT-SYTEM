@@ -10,7 +10,7 @@ Admin will be able to do following services:
 ## HOW TO START WITH THE PORJECT:
 - Fork the repo and clone it.
 - You need odbc.jar and mysqlconnector.jar files for connecting Java code to MySql.
-- Make changes in config.java file .
-- Run the project by javac home.java
+- Make changes in conn.java file .
+- Run the project by javac HOTELMANAGEMENT.java
 - Compile it by java home
 
