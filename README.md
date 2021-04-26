@@ -13,4 +13,4 @@ Admin will be able to do following services:
 - Make changes in conn.java file .
 - Run the project by javac HOTELMANAGEMENT.java
 - Compile it by java HOTELMANAGEMENT
-
+- Dont forget to add mysql-connector.jar file in project.
