@@ -13,6 +13,14 @@ public class UpdateRoom extends JFrame implements ActionListener{
     JButton b1,b2,b3;
     UpdateRoom()
     {
+		ImageIcon i1  = new ImageIcon(ClassLoader.getSystemResource("hotel/management/icons/seventh.jpg"));
+                Image i3 = i1.getImage().getScaledInstance(550, 250,Image.SCALE_DEFAULT);
+                ImageIcon i2 = new ImageIcon(i3);
+                JLabel ll1 = new JLabel(i2);
+                ll1.setBounds(400,80,600,250);
+                add(ll1);
+		
+		
         JLabel l1 = new JLabel("Update Room Status");
 		l1.setFont(new Font("Tahoma", Font.PLAIN, 25));
 		l1.setBounds(30, 20, 250, 30);
@@ -94,8 +102,7 @@ public class UpdateRoom extends JFrame implements ActionListener{
                 
                 setLayout(null);
                 
-            setSize(900,600);
-            setLocation(430,170);
+           setBounds(430, 200, 1000, 450);
             
                 setVisible(true);
     }

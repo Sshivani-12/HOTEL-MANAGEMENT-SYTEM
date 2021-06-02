@@ -22,13 +22,13 @@ public class Reception extends JFrame {
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
                 
-           /*     ImageIcon i1  = new ImageIcon(ClassLoader.getSystemResource("hotel/management/system/icons/fourth.jpg"));
+               ImageIcon i1  = new ImageIcon(ClassLoader.getSystemResource("hotel/management/icons/fourth.jpg"));
                 Image i3 = i1.getImage().getScaledInstance(500, 500,Image.SCALE_DEFAULT);
                 ImageIcon i2 = new ImageIcon(i3);
                 JLabel l1 = new JLabel(i2);
-                l1.setBounds(250,30,500,470);
+                l1.setBounds(250,30,580,470);
                 add(l1);
-		*/
+		
 		JButton btnNewCustomerForm = new JButton("New Customer Form");
 		btnNewCustomerForm.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {

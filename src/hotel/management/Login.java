@@ -35,6 +35,12 @@ public class Login extends JFrame implements ActionListener{
       t2.setBounds(180,120,150,30);
       add(t2);
      
+	 ImageIcon i1 = new ImageIcon(ClassLoader.getSystemResource("hotel/management/icons/login.jpg"));
+        Image i2 = i1.getImage().getScaledInstance(200,200,Image.SCALE_DEFAULT);
+        ImageIcon i3 =  new ImageIcon(i2);
+        JLabel l3 = new JLabel(i3);
+        l3.setBounds(500,50,150,150);
+        add(l3);
         
         
         
@@ -53,7 +59,10 @@ public class Login extends JFrame implements ActionListener{
       add(b2);
       
      //setContentPane().setBackground(Color.WHITE);
-       setSize(900,600);setLocation(430,170);
+       setVisible(true);
+        setSize(840,300);
+        setLocation(300,150);
+
           
      setVisible(true);
     }

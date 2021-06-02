@@ -24,6 +24,12 @@ public class UpdateCheck extends JFrame implements ActionListener{
     l1.setBounds(50,30, 200, 30);
     add(l1);
 
+  
+                ImageIcon i1  = new ImageIcon(ClassLoader.getSystemResource("hotel/management/icons/nine.jpg"));
+                JLabel ll1 = new JLabel(i1);
+                ll1.setBounds(450,70,476,270);
+                add(ll1);
+				
      JLabel l2 = new JLabel("Customer ID");
     //l2.setFont(new Font("Tahoma", Font.PLAIN, 20));
     l2.setBounds(30, 80,100,20);
@@ -115,8 +121,7 @@ public class UpdateCheck extends JFrame implements ActionListener{
     
     setLayout(null);
     
-            setSize(900,600);
-            setLocation(430,170);
+            setBounds(500, 200, 950, 500);
             
                 setVisible(true);
     

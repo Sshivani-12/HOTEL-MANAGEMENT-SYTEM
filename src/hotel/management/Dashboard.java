@@ -9,7 +9,14 @@ public class Dashboard extends JFrame {
     Dashboard()
     {
         
-        
+          
+        ImageIcon i1 = new ImageIcon(ClassLoader.getSystemResource("hotel/management/icons/third.jpg"));
+        Image i2 = i1.getImage().getScaledInstance(1950, 1000,Image.SCALE_DEFAULT);
+        ImageIcon i3 = new ImageIcon(i2); 
+	JLabel NewLabel = new JLabel(i3);
+	NewLabel.setBounds(0, 0, 1950, 1000); 
+        add(NewLabel);
+		
     JLabel a = new JLabel("THE TAJ GROUP WELCOMES YOU");
 	a.setForeground(Color.BLACK);
         a.setFont(new Font("Tahoma", Font.PLAIN, 46));

@@ -54,13 +54,13 @@ public class Room extends JFrame {
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
                 
-               /* ImageIcon i1  = new ImageIcon(ClassLoader.getSystemResource("hotel/management/system/icons/eight.jpg"));
+				ImageIcon i1  = new ImageIcon(ClassLoader.getSystemResource("hotel/management/icons/twelve.jpg"));
                 Image i3 = i1.getImage().getScaledInstance(600, 600,Image.SCALE_DEFAULT);
                 ImageIcon i2 = new ImageIcon(i3);
                 JLabel l1 = new JLabel(i2);
                 l1.setBounds(500,0,600,600);
                 add(l1);
-                */
+                
 		
 		table = new JTable();
 		table.setBounds(0, 40, 500, 400);

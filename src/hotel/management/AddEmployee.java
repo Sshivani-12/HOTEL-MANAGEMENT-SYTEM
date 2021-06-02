@@ -122,7 +122,13 @@ public class AddEmployee extends JFrame{ //Third Frame
 			
      
            
-            
+             ImageIcon i1 = new ImageIcon(ClassLoader.getSystemResource("hotel/management/icons/tenth.jpg"));
+            Image i3 = i1.getImage().getScaledInstance(500, 500,Image.SCALE_DEFAULT);
+            ImageIcon i2 = new ImageIcon(i3);
+            JLabel image = new JLabel(i2);
+            image.setBounds(410,80,480,410);
+            add(image);
+
             Next.addActionListener(new ActionListener(){
                 public void actionPerformed(ActionEvent ae){
                     String name = t1.getText();
