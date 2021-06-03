@@ -161,10 +161,18 @@ public class AddDriver extends JFrame implements ActionListener{
                 String str = "INSERT INTO driver values( '"+name+"', '"+age+"', '"+gender+"','"+company+"', '"+brand+"', '"+available+"','"+location+"')";
               
                 
+				if(t1.getText().length() == 0 || t2.getText().length() == 0 ||t3.getText().length() == 0 || t4.getText().length() == 0|| t5.getText().length() == 0 )
+			  {
+            //notify user that mandatory field is empty.
+			
+				JOptionPane.showMessageDialog(null, "Oops!Add details of Driver");
+				}
+               else
+			   {
 		c.s.executeUpdate(str);
 		JOptionPane.showMessageDialog(null, "Driver Successfully Added");
                 this.setVisible(false);
-               
+               }
                 }catch(Exception ee){
                     System.out.println(ee);
                 }

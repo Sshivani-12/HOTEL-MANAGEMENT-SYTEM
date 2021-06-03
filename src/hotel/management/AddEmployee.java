@@ -138,7 +138,7 @@ public class AddEmployee extends JFrame{ //Third Frame
                     String aadhar = t5.getText();
                     String email = t6.getText();
                    
-                    String gender = null;
+				    String gender = null;
                     
                     if(NewRadioButton.isSelected()){
                         gender = "male";
@@ -151,13 +151,23 @@ public class AddEmployee extends JFrame{ //Third Frame
                     String s6 = (String)c1.getSelectedItem();
                     
                     try {
+						
+						
+				if(t1.getText().length() == 0 || t2.getText().length() == 0 ||t3.getText().length() == 0 || t4.getText().length() == 0|| t5.getText().length() == 0 || t6.getText().length() == 0 )
+			  {
+            //notify user that mandatory field is empty.
+				
+				JOptionPane.showMessageDialog(null, "Oops!Add details of Employee");
+				}
+               else
+			   {
                         conn c = new conn();
                         String str = "INSERT INTO employee values( '"+name+"', '"+age+"', '"+gender+"','"+s6+"', '"+salary+"', '"+phone+"','"+aadhar+"', '"+email+"')";
                         
                         c.s.executeUpdate(str);
                         JOptionPane.showMessageDialog(null,"Employee Added");
                         setVisible(false);
-                    
+			   }
                     } catch (Exception e) {
                         e.printStackTrace();
         	    }

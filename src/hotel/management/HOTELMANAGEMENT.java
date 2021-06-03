@@ -38,7 +38,7 @@ add(l1);
     
     JLabel l2=new JLabel("Hotel Management System");//image la label madhe takaycha
    
-    l2.setBounds(320,90,900,90); //y axis,x axis,size
+    l2.setBounds(120,150,900,90); //y axis,x axis,size
     l2.setForeground(Color.BLACK);//in awt packet
     
 	l2.setFont(new Font("serif",Font.PLAIN,70));
@@ -47,7 +47,7 @@ add(l1);
     JButton b1=new JButton("Next");
     b1.setBackground(Color.BLACK);
     b1.setForeground(Color.WHITE);
-    b1.setBounds(620,320,140,50);
+    b1.setBounds(420,320,140,50);
     b1.addActionListener(this);
     
     l1.add(b1);
@@ -64,7 +64,7 @@ add(l1);
             Thread.sleep(500);
         }
         catch(Exception e){}
-     l2.setVisible(true);
+		l2.setVisible(true);
        
         try{
         Thread.sleep(500);

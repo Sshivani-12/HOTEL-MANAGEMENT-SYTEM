@@ -125,7 +125,8 @@ public class AddRoom extends JFrame implements ActionListener{
         try{
             
             if(ae.getSource() == b1){
-                try{
+                try
+				{
                 conn c = new conn();
                 String room = t4.getText();
                 String available = (String)comboBox.getSelectedItem();
@@ -134,12 +135,21 @@ public class AddRoom extends JFrame implements ActionListener{
                 String type = (String)comboBox_3.getSelectedItem();
                 String str = "INSERT INTO room values( '"+room+"', '"+available+"', '"+status+"','"+price+"', '"+type+"')";
               
-                
+			  
+			  if(t4.getText().length() == 0 || t2.getText().length() == 0 )
+			  {
+            //notify user that mandatory field is empty.
+			
+				JOptionPane.showMessageDialog(null, "Oops!Add details of Room ");
+				}
+               else
+			   { 
 		c.s.executeUpdate(str);
 		JOptionPane.showMessageDialog(null, "Room Successfully Added");
                 this.setVisible(false);
-               
-                }catch(Exception ee){
+               }
+                }
+				catch(Exception ee){
                     System.out.println(ee);
                 }
             }

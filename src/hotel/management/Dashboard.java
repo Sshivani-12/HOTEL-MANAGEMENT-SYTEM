@@ -44,10 +44,23 @@ public class Dashboard extends JFrame {
             }
 	});
         
-        JMenu Admin = new JMenu("ADMIN");
-        Admin.setForeground(Color.RED);
-	menu.add(Admin);
+		JButton b1;
+		b1=new JButton("Admin");
+      b1.setBackground(Color.BLACK);
+      b1.setForeground(Color.WHITE) ;
+      b1.setBounds(1250,40,110,30);
+      
+      add(b1);
+	  
         
+             b1.addActionListener(new ActionListener(){
+            public void actionPerformed(ActionEvent ae){
+                try{
+                    new Admin().setVisible(true);
+                }catch(Exception e ){}
+            }
+	});
+		/*
         JMenuItem Employee = new JMenuItem("ADD EMPLOYEE");
 	//Employee.addActionListener(this);
         Admin.add(Employee);
@@ -85,7 +98,8 @@ public class Dashboard extends JFrame {
                     new AddDriver().setVisible(true);
                 }catch(Exception e ){}
             }
-	});
+	});*/
+	
     }
     
     /*

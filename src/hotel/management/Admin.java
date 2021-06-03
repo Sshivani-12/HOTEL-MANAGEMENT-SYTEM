@@ -8,13 +8,13 @@ import javax.swing.*;
 import java.sql.*;
 
 
-public class Login extends JFrame implements ActionListener{
+public class Admin extends JFrame implements ActionListener{
     JLabel l1,l2;//to access outside constructor
     JTextField t1;
     JButton b1,b2;
     JPasswordField t2; 
 	JFrame j;
-    Login()
+    Admin()
     {
        
         l1=new JLabel("Username");
@@ -62,7 +62,7 @@ public class Login extends JFrame implements ActionListener{
      //setContentPane().setBackground(Color.WHITE);
        setVisible(true);
         setSize(840,300);
-        setLocation(120,150);
+        setLocation(300,150);
 
           
      setVisible(true);
@@ -78,14 +78,14 @@ public void actionPerformed(ActionEvent ae)//to go to next page
 	   
        conn c =new conn();
         
-       String str="select * from login where username= '"+username+"' and password='"+password+"'";
+       String str="select * from admin where username= '"+username+"' and password='"+password+"'";
        try
        {
        ResultSet rs=c.s.executeQuery(str); 
        if(rs.next())
        {
            
-        new Dashboard().setVisible(true);
+        new AdminPage().setVisible(true);
         this.setVisible(false);
        }
        else
@@ -109,6 +109,6 @@ public void actionPerformed(ActionEvent ae)//to go to next page
  
     public static void main(String args[])
     {
-        new Login();
+        new Admin();
     }
 }
