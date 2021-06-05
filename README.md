@@ -6,6 +6,7 @@ Admin will be able to do following services:
 - Add Employee details
 - Add DriverList details
 - Extract details of Rooms,Driver,Employee
+- Delete Employee and rooms  
 
 ## HOW TO START WITH THE PORJECT:
 - Fork the repo and clone it.
