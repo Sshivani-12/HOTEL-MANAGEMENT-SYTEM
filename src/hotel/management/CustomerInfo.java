@@ -66,7 +66,7 @@ public class CustomerInfo extends JFrame {
 		JButton btnExit = new JButton("Back");
 		btnExit.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				new AdminPage().setVisible(true);
+				new Dashboard().setVisible(true);
                                 setVisible(false);
 			}
 		});

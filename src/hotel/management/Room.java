@@ -92,7 +92,7 @@ public class Room extends JFrame {
 		JButton btnNewButton = new JButton("Back");
 		btnNewButton.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				new AdminPage().setVisible(true);
+				new Dashboard().setVisible(true);
                                 setVisible(false);
 			}
 		});
