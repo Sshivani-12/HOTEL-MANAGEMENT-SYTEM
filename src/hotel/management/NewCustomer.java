@@ -151,6 +151,16 @@ public class NewCustomer extends JFrame {
 		JButton btnNewButton = new JButton("Add");
 		btnNewButton.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
+				if(t1.getText().length() == 0 || t2.getText().length() == 0 ||lblCountry.getText().length() == 0 || lblCheckInStatus.getText().length() == 0|| lblDeposite.getText().length() == 0 )
+			  {
+            //notify user that mandatory field is empty.
+			
+				JOptionPane.showMessageDialog(null, "Oops!Add details of New Customer");
+				}
+               else
+			   {
+              
+				
                             conn c = new conn();
                             String radio = null;
                             
@@ -188,6 +198,7 @@ public class NewCustomer extends JFrame {
 		    		catch(NumberFormatException s){
 		    			JOptionPane.showMessageDialog(null, "Please enter a valid Number");
 			}
+			   }
 			}
 		});
 		btnNewButton.setBounds(100, 430, 120, 30);

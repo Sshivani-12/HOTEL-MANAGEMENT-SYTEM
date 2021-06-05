@@ -53,8 +53,8 @@ public class CustomerInfo extends JFrame {
 	public CustomerInfo() throws SQLException {
 		//conn = Javaconnect.getDBConnection();
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-	        setSize(900,600);
-                setLocation(430,170);
+	        setSize(900,800);
+                setLocation(380,170);
           
 		contentPane = new JPanel();
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));

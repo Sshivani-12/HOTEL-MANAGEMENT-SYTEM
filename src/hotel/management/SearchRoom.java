@@ -101,6 +101,7 @@ public class SearchRoom extends JFrame implements ActionListener {
             ResultSet rs = c.s.executeQuery(str);
             t1.setModel(DbUtils.resultSetToTableModel(rs));
             
+
             if(c2.isSelected())
 				{	
 					rs = c.s.executeQuery(str2);

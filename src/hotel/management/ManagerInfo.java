@@ -50,10 +50,13 @@ public class ManagerInfo extends JFrame {
 	 */
 	public ManagerInfo() throws SQLException {
 		//conn = Javaconnect.getDBConnection();
+                
+                
+                                
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 	      
-                 setSize(900,600);
-                setLocation(430,170);
+                setSize(1100,600);
+                setLocation(350,170);
           
 		contentPane = new JPanel();
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
@@ -61,7 +64,11 @@ public class ManagerInfo extends JFrame {
 		contentPane.setLayout(null);
 		
 		table = new JTable();
-		table.setBounds(0, 34, 1000, 450);
+		
+               
+                
+                
+                table.setBounds(0, 34, 1000, 450);
 		contentPane.add(table);
 		
 		JButton btnLoadData = new JButton("Load Data");
@@ -72,7 +79,19 @@ public class ManagerInfo extends JFrame {
 				String displayCustomersql = "select * from Employee where job = 'Manager'";
 				ResultSet rs = c.s.executeQuery(displayCustomersql);
 				table.setModel(DbUtils.resultSetToTableModel(rs));
+                                
+              /*                   table=new JTable(5,7)
+                {
+                public boolean isCellEditable(int rs) 
+                {
+                 return false;
+                }
+                };
+                */                
+                                 
+                               
 			}
+                               
 				catch(Exception e1){
 					e1.printStackTrace();
 				}

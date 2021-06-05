@@ -14,6 +14,8 @@ import java.sql.*;
 import javax.swing.*;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
+
+
 public class Employee extends JFrame {
 	Connection conn = null;
 	private JPanel contentPane;
@@ -49,8 +51,9 @@ public class Employee extends JFrame {
 	public Employee() throws SQLException {
 		//conn = Javaconnect.getDBConnection();
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-	        setSize(900,600);
-            setLocation(430,170);
+	        setSize(1100,600);
+            setLocation(350,170);
+          
           
 		contentPane = new JPanel();
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
@@ -69,6 +72,8 @@ public class Employee extends JFrame {
 				String displayCustomersql = "select * from Employee";
 				ResultSet rs = c.s.executeQuery(displayCustomersql);
 				table.setModel(DbUtils.resultSetToTableModel(rs));
+				
+				
 			}
 				catch(Exception e1){
 					e1.printStackTrace();
