@@ -14,6 +14,7 @@ import javax.swing.JTable;
 import javax.swing.JButton;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
+import javax.swing.table.DefaultTableModel;
 
 public class CustomerInfo extends JFrame {
 	Connection conn = null;
@@ -65,7 +66,7 @@ public class CustomerInfo extends JFrame {
 		JButton btnExit = new JButton("Back");
 		btnExit.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				new Reception().setVisible(true);
+				new AdminPage().setVisible(true);
                                 setVisible(false);
 			}
 		});
@@ -97,6 +98,42 @@ public class CustomerInfo extends JFrame {
                 btnLoadData.setForeground(Color.WHITE);
 		contentPane.add(btnLoadData);
 		
+                
+                JButton btnDelete = new JButton("Delete");
+		btnDelete.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+			
+                            
+                            int row = table.getSelectedRow();
+DefaultTableModel model= (DefaultTableModel)table.getModel();
+
+String selected = model.getValueAt(row, 0).toString();
+
+            if (row >= 0) {
+
+                model.removeRow(row);
+
+                try {
+                  
+           Connection conn = (Connection) DriverManager.getConnection("jdbc:mysql://localhost:3350/hrm","root","root");
+                    PreparedStatement ps = conn.prepareStatement("delete from customer where ID='"+selected+"' ");
+                    ps.executeUpdate();
+                }
+                catch (Exception w) {
+                    JOptionPane.showMessageDialog(null, "Connection Error!");
+                }           
+            }
+			}
+		});
+                btnDelete.setBounds(700, 510, 120, 30);
+                
+		btnDelete.setBackground(Color.BLACK);
+                btnDelete.setForeground(Color.WHITE);
+		contentPane.add(btnDelete);
+                
+                
+                
+                
 		lblId = new JLabel("ID");
 		lblId.setBounds(31, 11, 46, 14);
 		contentPane.add(lblId);

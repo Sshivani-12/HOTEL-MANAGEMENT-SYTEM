@@ -14,6 +14,7 @@ import java.sql.*;
 import javax.swing.*;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
+import javax.swing.table.*;
 
 
 public class Employee extends JFrame {
@@ -89,7 +90,7 @@ public class Employee extends JFrame {
 		JButton btnExit = new JButton("Back");
 		btnExit.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				new Reception().setVisible(true);
+				new AdminPage().setVisible(true);
                                 setVisible(false);
 			}
 		});
@@ -97,6 +98,84 @@ public class Employee extends JFrame {
                 btnExit.setBackground(Color.BLACK);
                 btnExit.setForeground(Color.WHITE);
 		contentPane.add(btnExit);
+                
+                
+                JButton btnDelete = new JButton("Delete");
+		btnDelete.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				
+                           /* DefaultTableModel m=(DefaultTableModel) table.getModel();
+                            
+                            if(table.getSelectedRowCount()==1)
+                            {
+                               m.removeRow(table.getSelectedRow());
+               JOptionPane.showMessageDialog(null, "Selected row deleted successfully");         
+                                       
+                                
+                            }
+                            else
+                            {
+                                if(table.getSelectedRowCount()==0)
+                                {
+                                    JOptionPane.showMessageDialog(null, "tableempty");
+                                }
+                                else
+                                {
+                                        JOptionPane.showMessageDialog(null, "plesase select");
+                                
+                                }
+
+
+                           
+                            }*/
+                           
+                            	
+                            /*	try{
+                                     int row=table.getSelectedRow();
+                            String cell=table.getModel().getValueAt(row,0).toString();
+                           
+                                conn c = new conn();
+				String sql = "delete * from Employee where lblNewLabel="+cell;
+				ResultSet rs = c.s.executeQuery(sql);
+				
+                            
+                            
+			
+                                                                      
+                                     JOptionPane.showMessageDialog(null, "deleted successfully");         
+                                }catch(Exception ee)
+                                {
+                                    JOptionPane.showMessageDialog(null, ee);         
+                                    
+                                }
+                                
+                            */
+                            
+                            int row = table.getSelectedRow();
+DefaultTableModel model= (DefaultTableModel)table.getModel();
+
+String selected = model.getValueAt(row, 0).toString();
+
+            if (row >= 0) {
+
+                model.removeRow(row);
+
+                try {
+                  
+           Connection conn = (Connection) DriverManager.getConnection("jdbc:mysql://localhost:3350/hrm","root","root");
+                    PreparedStatement ps = conn.prepareStatement("delete from employee where Name='"+selected+"' ");
+                    ps.executeUpdate();
+                }
+                catch (Exception w) {
+                    JOptionPane.showMessageDialog(null, "Connection Error!");
+                }           
+            }
+			}
+		});
+		btnDelete.setBounds(790, 500, 120, 30);
+                btnDelete.setBackground(Color.BLACK);
+                btnDelete.setForeground(Color.WHITE);
+		contentPane.add(btnDelete);
 		
 		lblNewLabel = new JLabel("Name");
 		lblNewLabel.setBounds(41, 11, 46, 14);

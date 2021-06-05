@@ -14,6 +14,7 @@ import java.sql.*;
 import javax.swing.*;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
+import javax.swing.table.DefaultTableModel;
 
 public class Room extends JFrame {
 	Connection conn = null;
@@ -91,7 +92,7 @@ public class Room extends JFrame {
 		JButton btnNewButton = new JButton("Back");
 		btnNewButton.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				new Reception().setVisible(true);
+				new AdminPage().setVisible(true);
                                 setVisible(false);
 			}
 		});
@@ -100,6 +101,37 @@ public class Room extends JFrame {
                 btnNewButton.setForeground(Color.WHITE);
 		contentPane.add(btnNewButton);
 		
+                  JButton btnDelete = new JButton("Delete");
+		btnDelete.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+			
+                            
+                            int row = table.getSelectedRow();
+DefaultTableModel model= (DefaultTableModel)table.getModel();
+
+String selected = model.getValueAt(row, 0).toString();
+
+            if (row >= 0) {
+
+                model.removeRow(row);
+
+                try {
+                  
+           Connection conn = (Connection) DriverManager.getConnection("jdbc:mysql://localhost:3350/hrm","root","root");
+                    PreparedStatement ps = conn.prepareStatement("delete from room where room='"+selected+"' ");
+                    ps.executeUpdate();
+                }
+                catch (Exception w) {
+                    JOptionPane.showMessageDialog(null, "Connection Error!");
+                }           
+            }
+			}
+		});
+		btnDelete.setBounds(210, 520, 120, 30);
+                btnDelete.setBackground(Color.BLACK);
+                btnDelete.setForeground(Color.WHITE);
+		contentPane.add(btnDelete);
+                
 		lblAvailability = new JLabel("Availability");
 		lblAvailability.setBounds(119, 15, 69, 14);
 		contentPane.add(lblAvailability);

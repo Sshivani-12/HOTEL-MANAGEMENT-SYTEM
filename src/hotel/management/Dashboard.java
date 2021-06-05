@@ -48,7 +48,7 @@ public class Dashboard extends JFrame {
 		b1=new JButton("Admin");
       b1.setBackground(Color.BLACK);
       b1.setForeground(Color.WHITE) ;
-      b1.setBounds(1250,40,110,30);
+      b1.setBounds(1390,20,110,30);
       
       add(b1);
 	  

@@ -48,8 +48,31 @@ public class AdminPage extends JFrame {
 		contentPane.add(btnNewCustomerForm);
 		
 		
-		JButton btnNewButton_2 = new JButton("AddRoom");
+                JButton btnNewButton_2 = new JButton("All Employee Info");
 		btnNewButton_2.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				try{
+				
+					Employee em = new Employee();
+					em.setVisible(true);
+					setVisible(false);
+					
+				}
+				catch (Exception e1){
+					e1.printStackTrace();
+				}
+			
+			}
+		});
+		btnNewButton_2.setBounds(10, 140, 200, 30);                
+                btnNewButton_2.setBackground(Color.BLACK);
+                btnNewButton_2.setForeground(Color.WHITE);
+
+		contentPane.add(btnNewButton_2);
+		
+                
+		JButton btnNewButton_3 = new JButton("AddRoom");
+		btnNewButton_3.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				try{
 				
@@ -64,14 +87,40 @@ public class AdminPage extends JFrame {
 			
 			}
 		});
-		btnNewButton_2.setBounds(10, 150, 200, 30);                
-                btnNewButton_2.setBackground(Color.BLACK);
-                btnNewButton_2.setForeground(Color.WHITE);
+		btnNewButton_3.setBounds(10, 230, 200, 30);                
+                btnNewButton_3.setBackground(Color.BLACK);
+                btnNewButton_3.setForeground(Color.WHITE);
 
-		contentPane.add(btnNewButton_2);
+		contentPane.add(btnNewButton_3);
 		
 		
-		JButton btnManagerInfo = new JButton("AddDriver");
+		JButton btnNewButton = new JButton("Room");
+		btnNewButton.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
+				try{
+				Room room = new Room();
+				room.setVisible(true);
+                                setVisible(false);
+				}
+				catch(Exception e){
+					e.printStackTrace();
+				}
+				
+			}
+		});
+		btnNewButton.setBounds(10, 320, 200, 30);
+                btnNewButton.setBackground(Color.BLACK);
+                btnNewButton.setForeground(Color.WHITE);
+
+                
+		contentPane.add(btnNewButton);
+		
+	
+                
+                
+                
+                
+                JButton btnManagerInfo = new JButton("AddDriver");
 		btnManagerInfo.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				try{
@@ -84,11 +133,33 @@ public class AdminPage extends JFrame {
 				}
 			}
 		});
-		btnManagerInfo.setBounds(10, 230, 200, 30);
+		btnManagerInfo.setBounds(10, 410, 200, 30);
                 btnManagerInfo.setBackground(Color.BLACK);
                 btnManagerInfo.setForeground(Color.WHITE);
 
 		contentPane.add(btnManagerInfo);
+                
+                
+                JButton btnNewButton_4 = new JButton("Customer Info");
+		btnNewButton_4.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				try{
+					//error ---------------------
+					CustomerInfo customer = new CustomerInfo();
+					customer.setVisible(true);				
+					setVisible(false);
+				}
+				catch (Exception e1){
+					e1.printStackTrace();
+				}
+			}
+		});
+		btnNewButton_4.setBounds(10, 500, 200, 30);
+                btnNewButton_4.setBackground(Color.BLACK);
+                btnNewButton_4.setForeground(Color.WHITE);
+
+		contentPane.add(btnNewButton_4);
+		
 		
 		
 		        setVisible(true);
