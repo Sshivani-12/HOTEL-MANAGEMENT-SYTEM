@@ -152,7 +152,17 @@ public class AddEmployee extends JFrame{ //Third Frame
                     
                     try {
 						
-						
+				if(t4.getText().length()!=10)
+                                {
+                                    JOptionPane.showMessageDialog(null, "Oops!Phone no should be of 10 digit");
+                                }
+                                
+                                if(t5.getText().length()!=12)
+                                {
+                                    JOptionPane.showMessageDialog(null, "Oops!Phone no should be of 12 digit");
+                                }
+                                
+                                
 				if(t1.getText().length() == 0 || t2.getText().length() == 0 ||t3.getText().length() == 0 || t4.getText().length() == 0|| t5.getText().length() == 0 || t6.getText().length() == 0 )
 			  {
             //notify user that mandatory field is empty.
